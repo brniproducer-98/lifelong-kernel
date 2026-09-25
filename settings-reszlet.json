@@ -1,0 +1,8 @@
+{
+  "_megjegyzes": "Ezt a részletet a csomag .claude/settings.json fájljába kell beolvasztani (a permissions.allow tömbbe). A frissítés letöltéséhez kell; a mappa megbízhatósági kérdésének elfogadása után él. Más domaint nem engedélyez.",
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
