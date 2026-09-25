@@ -3,12 +3,10 @@
   "datum": "2026-09-25",
   "alap": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/",
   "valtozasok": [
-    "a `/frissites` végponttól-végpontig tesztje után: a közös parancsokból minden `{{ }}` mező a `rendszer/profil.md`-be került (a frissítés ehhez nem nyúl)",
-    "a kiadási lista `mod` mezője négyféle (kozos, uj_ha_hianyzik, hazirend, soha)",
-    "a frissítés mindent letölt és ellenőriz, ment, csak utána ír, kitöltetlen mezős fájlt nem ír",
-    "a változások az ügyfél nyelvén (`VALTOZASOK-UGYFELNEK.md`)",
-    "a házirend-szakasz név nélkül, betűre közös",
-    "a script megáll kitöltetlen mezőn"
+    "Az első beszélgetés és a frissítés parancsa mostantól egy külön profilfájlból olvassa a rád szabott adatokat (a neved, az oldalad, a kínálatod), ezért a közös rész frissítése ezekhez soha nem nyúl.",
+    "A frissítés előbb letölti és ellenőrzi az összes fájlt, a régi változatokról mentést készít, és csak utána ír; ha bármi nem stimmel, semmit nem változtat.",
+    "Bekerült egy új tudás-sablon a kínálatnak és az áraknak; a rendszer csak akkor hozza létre, ha nálad még nincs ilyen.",
+    "A házirend egy szakasza megújult: ha a beállítás félbemaradt, a rendszer nem mutatkozik be újra, hanem folytatást ajánl; ha a beállítás előtt szöveget kérsz, megmondja, hogy az még nem a te hangodon készült; és minden beszélgetésben előre szól az angol ablakokról."
   ],
   "fajlok": [
     {
@@ -27,8 +25,8 @@
     },
     {
       "ut": ".claude/commands/frissites.md",
-      "sha256": "5244c8ef1c174c3807249cb6b57f77280f0b5446cc121afb4388c4a7747edf65",
-      "meret": 6659,
+      "sha256": "242e84fdf8290755a845a1783e18e98395fd12f117880d393f18aa267fd74397",
+      "meret": 8673,
       "mod": "kozos",
       "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/.claude/commands/frissites.md"
     },
@@ -41,8 +39,8 @@
     },
     {
       "ut": "records/verzio.md",
-      "sha256": "05b3748248d5c5055a57611e209b0f0d3e549ed4ae51be8e4bcc62b91fa00c9d",
-      "meret": 327,
+      "sha256": "1dc892be4352b44dff4e5ed9b490f849ad729ec110a7f808cf5d48858916091e",
+      "meret": 326,
       "mod": "soha",
       "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/records/verzio.md"
     },
@@ -69,8 +67,8 @@
     },
     {
       "ut": "rendszer/PROFIL-SABLON.md",
-      "sha256": "5de9cebd3965487bc9f37c8d8cfd656ca991e30cf476f57dd7c91b45544ef84a",
-      "meret": 1835,
+      "sha256": "c1fcfbf01ef474075c9730632f0cc6cf83beb9141867845cea48631188d5c0c6",
+      "meret": 1888,
       "mod": "soha",
       "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/rendszer/PROFIL-SABLON.md"
     },
@@ -143,5 +141,5 @@
     "cimsor": "## Az első beszélgetés és a hiányzó tudás",
     "sha256": "e2fc2b86d9be0e5b09476d76affaf9eefb58f51e707786b170368f0be86e2ab0"
   },
-  "szabaly": "Az ügyfélnél a \"mod\" dönt: kozos = felülírható; uj_ha_hianyzik = csak akkor jön létre, ha még nincs; hazirend = a házirend cimsor alatti szakasza cserélhető vele, külön igennel; soha = nem írható. A records/, a rendszer/ és a saját anyag a frissítésben nem írható. Kitöltetlen {{ }} mező = sablon, nem írható."
+  "szabaly": "Az ügyfélnél a \"mod\" dönt: kozos = felülírható; uj_ha_hianyzik = csak akkor jön létre, ha még nincs; hazirend = a házirend cimsor alatti szakasza cserélhető vele, külön igennel; soha = nem írható. A kiadás fájlja nem írható a records/, a rendszer/ mappába és a saját anyag közé; a rendszer saját nyilvántartásait (records/verzio.md, records/naplo.md, a mentés és az ideiglenes mappa) maga vezeti. Kitöltetlen dupla kapcsos mező = sablon, nem írható."
 }

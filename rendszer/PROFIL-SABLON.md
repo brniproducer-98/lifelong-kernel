@@ -23,4 +23,4 @@ A csomag gyártója tölti ki kiküldés előtt, és `rendszer/profil.md` néven
 ## A Lifelong elérése
 
 - **A jelentés címe:** {{a mi e-mail-címünk}}
-- **A frissítés kiadási listája:** {{MANIFEST_URL, a nyilvános kernel-repó `main` ágának `kernel-manifest.json` raw-címe, HTTPS}}
+- **A frissítés kiadási listája:** {{MANIFEST_URL, a nyilvános kernel-repó `main` ágának `kernel-manifest.json` raw-címe; kötelezően `https://`, különben a `/frissites` megáll}}

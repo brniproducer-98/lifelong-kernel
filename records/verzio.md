@@ -1,6 +1,6 @@
 # A közös rész verziója
 
-Ezt a fájlt a rendszer vezeti. A `/frissites` parancs ezt veti össze a Lifelong kiadási jegyzékével.
+Ezt a fájlt a rendszer vezeti. A `/frissites` parancs ezt veti össze a Lifelong kiadási listájával.
 
 **Kernel verzió:** {{KERNEL_VERZIO}}
 **Telepítve:** {{TELEPITES_DATUMA}}
