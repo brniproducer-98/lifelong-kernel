@@ -1,133 +1,145 @@
 {
-  "verzio": "1.1.0",
+  "verzio": "1.1.1",
   "datum": "2026-09-25",
-  "alap": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/",
+  "alap": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/",
   "valtozasok": [
-    "a jelentés a beállítás végén (az ügyfél küldi, személyes adat nélkül)",
-    "`/frissites` a nyilvános kernel-repóból, igen után",
-    "`records/verzio.md`",
-    "`settings-reszlet.json`",
-    "a kiadási script és az ügyfélnév-gát",
-    "a nyilvános README"
+    "Az első beszélgetés és a frissítés parancsa mostantól egy külön profilfájlból olvassa a rád szabott adatokat (a neved, az oldalad, a kínálatod), ezért a közös rész frissítése ezekhez soha nem nyúl.",
+    "A frissítés előbb letölti és ellenőrzi az összes fájlt, a régi változatokról mentést készít, és csak utána ír; ha bármi nem stimmel, semmit nem változtat.",
+    "Bekerült egy új tudás-sablon a kínálatnak és az áraknak; a rendszer csak akkor hozza létre, ha nálad még nincs ilyen.",
+    "A házirend egy szakasza megújult: ha a beállítás félbemaradt, a rendszer nem mutatkozik be újra, hanem folytatást ajánl; ha a beállítás előtt szöveget kérsz, megmondja, hogy az még nem a te hangodon készült; és minden beszélgetésben előre szól az angol ablakokról."
   ],
   "fajlok": [
     {
       "ut": "CLAUDE-BLOKK.md",
-      "sha256": "d92a2a1ece2b61e0639896fb61168aa8cc4b756a7bf1b4d560edb7017eee4033",
-      "meret": 3366,
-      "kozos": false,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/CLAUDE-BLOKK.md"
+      "sha256": "765199d23249618e92f8345640f210d72d0250d9de7bf2535d24103551df4c4b",
+      "meret": 3779,
+      "mod": "hazirend",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/CLAUDE-BLOKK.md"
     },
     {
       "ut": ".claude/commands/beallitas.md",
-      "sha256": "6dc555659270ebd0e7824d21a9bfed7d32aa2cf5103d6de23ac63d11acebb28f",
-      "meret": 12553,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/.claude/commands/beallitas.md"
+      "sha256": "4d92a2a0b76412301287258c504cb1709df9ec5181ad22a01959bc7223b25e32",
+      "meret": 13040,
+      "mod": "kozos",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/.claude/commands/beallitas.md"
     },
     {
       "ut": ".claude/commands/frissites.md",
-      "sha256": "30947307774bcd560e276317cfb78d4f118925b3716acd7f50e2211e40c6caac",
-      "meret": 3213,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/.claude/commands/frissites.md"
+      "sha256": "242e84fdf8290755a845a1783e18e98395fd12f117880d393f18aa267fd74397",
+      "meret": 8673,
+      "mod": "kozos",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/.claude/commands/frissites.md"
     },
     {
       "ut": "records/beallitas-allapot.md",
       "sha256": "a010f6e3b4587caa03ad60f5f25f4426bb70cb3f4730c1746d7961ebfc607c4e",
       "meret": 1427,
-      "kozos": false,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/records/beallitas-allapot.md"
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/records/beallitas-allapot.md"
     },
     {
       "ut": "records/verzio.md",
-      "sha256": "05b3748248d5c5055a57611e209b0f0d3e549ed4ae51be8e4bcc62b91fa00c9d",
-      "meret": 327,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/records/verzio.md"
+      "sha256": "1dc892be4352b44dff4e5ed9b490f849ad729ec110a7f808cf5d48858916091e",
+      "meret": 326,
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/records/verzio.md"
     },
     {
       "ut": "BEALLITAS-PROMPT.md",
       "sha256": "1f121a9a89d1c1776d9af795ab79b2bbc3d4c37e553d30f92711a0a4c4f944a6",
       "meret": 3883,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/BEALLITAS-PROMPT.md"
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/BEALLITAS-PROMPT.md"
     },
     {
       "ut": "settings-reszlet.json",
       "sha256": "cbf5200dcda49acb934dace78c726ebc4d4aa74681b6fa89be6a3a5c43d660d6",
       "meret": 356,
-      "kozos": false,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/settings-reszlet.json"
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/settings-reszlet.json"
     },
     {
       "ut": "README.md",
-      "sha256": "37cdab64c70aa0db3d58208ce18dd01ee12252c340d39e279fc9a272d42018a5",
-      "meret": 2168,
-      "kozos": false,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/README.md"
+      "sha256": "33e4fb40838c91856f29de1a0c444cd0d3c68763d39ab88761130731ec4915c9",
+      "meret": 2556,
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/README.md"
+    },
+    {
+      "ut": "rendszer/PROFIL-SABLON.md",
+      "sha256": "c1fcfbf01ef474075c9730632f0cc6cf83beb9141867845cea48631188d5c0c6",
+      "meret": 1888,
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/rendszer/PROFIL-SABLON.md"
+    },
+    {
+      "ut": "VALTOZASOK-UGYFELNEK.md",
+      "sha256": "a5cda4a51f752ce0563c3db097f5f49f927451ef396540f82da94e6e5309af2e",
+      "meret": 1556,
+      "mod": "soha",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/VALTOZASOK-UGYFELNEK.md"
     },
     {
       "ut": "knowledge/eszkozok.md",
       "sha256": "af63b7fb0ad6ff4c5e870642b33e2934b0449cae13330933cc29b03b6c98534a",
       "meret": 385,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/eszkozok.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/eszkozok.md"
     },
     {
       "ut": "knowledge/hang.md",
       "sha256": "1134d4e2035183e3980656cd5bde10beb19ee25cfbdb84c2eed4a62c0df6a3f9",
       "meret": 504,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/hang.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/hang.md"
     },
     {
       "ut": "knowledge/hatarok.md",
       "sha256": "92193c5a025109deaf2f7613e4745217d9e55d394e43833278361e3fd1f71260",
       "meret": 510,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/hatarok.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/hatarok.md"
     },
     {
       "ut": "knowledge/kinalat.md",
       "sha256": "10723e27a70712b014a4af937b5987d31ab1849fd7aa3071750e5969841537e5",
       "meret": 436,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/kinalat.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/kinalat.md"
     },
     {
       "ut": "knowledge/ritmus.md",
       "sha256": "04cf8ca4bfabcc1430c1d1557be186aa6632814b2d87cdbd517bb1bcdc0366e8",
       "meret": 245,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/ritmus.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/ritmus.md"
     },
     {
       "ut": "knowledge/tolcser.md",
       "sha256": "4eb5f718642b83037ad9c8d47544083b77c53cdabbd5120efa533c853784d435",
       "meret": 509,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/tolcser.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/tolcser.md"
     },
     {
       "ut": "knowledge/ugyfelek.md",
       "sha256": "7645e2c9f34f4ac2b0ff1dd678548cf41bd0fc989c20609ce5d1bc720f365444",
       "meret": 441,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/ugyfelek.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/ugyfelek.md"
     },
     {
       "ut": "knowledge/vallalkozas.md",
       "sha256": "855d738fa7c74346cd1a56038baa0c51d25cff0073ecfe1910586c52c93a6f2a",
       "meret": 391,
-      "kozos": true,
-      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.0/knowledge/vallalkozas.md"
+      "mod": "uj_ha_hianyzik",
+      "url": "https://raw.githubusercontent.com/brniproducer-98/lifelong-kernel/v1.1.1/knowledge/vallalkozas.md"
     }
   ],
   "hazirend_szakasz": {
     "ut": "CLAUDE-BLOKK.md",
     "cimsor": "## Az első beszélgetés és a hiányzó tudás",
-    "sha256": "d9b77aba7cac3fdba5df4fc29baa6b08d98a9a2ed07d4e04dc890a123ed05305"
+    "sha256": "e2fc2b86d9be0e5b09476d76affaf9eefb58f51e707786b170368f0be86e2ab0"
   },
-  "szabaly": "Az ügyfélnél csak a \"kozos\": true fájlok írhatók, a megadott útvonalra. A házirendből egyedül a cimsor alatti szakasz cserélhető, külön igennel. knowledge/, records/ és saját anyag soha."
+  "szabaly": "Az ügyfélnél a \"mod\" dönt: kozos = felülírható; uj_ha_hianyzik = csak akkor jön létre, ha még nincs; hazirend = a házirend cimsor alatti szakasza cserélhető vele, külön igennel; soha = nem írható. A kiadás fájlja nem írható a records/, a rendszer/ mappába és a saját anyag közé; a rendszer saját nyilvántartásait (records/verzio.md, records/naplo.md, a mentés és az ideiglenes mappa) maga vezeti. Kitöltetlen dupla kapcsos mező = sablon, nem írható."
 }
