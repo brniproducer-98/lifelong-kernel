@@ -11,7 +11,9 @@ Ez a Lifelong Company ügyfélrendszereinek közös része. Egy ügyfél a sajá
 | `CLAUDE-BLOKK.md` | három bekezdés az ügyfél házirendjének végére: önindítás, a hiányzó tudás kérdezése, írás-szabály |
 | `.claude/commands/beallitas.md` | az első beszélgetés |
 | `.claude/commands/frissites.md` | a közös rész frissítése innen; megmutat, csak igen után ír |
-| `knowledge/*.md` | a tudás sablonjai, `[KITÖLTENDŐ]` mezőkkel |
+| `rendszer/PROFIL-SABLON.md` | az ügyfélre szabott adatok egyetlen helye (a csomag gyártója tölti ki `rendszer/profil.md` néven); a közös parancsok innen olvasnak, a frissítés ehhez nem nyúl |
+| `knowledge/*.md` | a tudás sablonjai, `[KITÖLTENDŐ]` mezőkkel; a frissítés csak újat hoz létre, meglévőt soha nem ír felül |
+| `VALTOZASOK-UGYFELNEK.md` | a változások az ügyfél nyelvén, verziónként; a frissítés ezt olvassa fel |
 | `records/beallitas-allapot.md`, `records/verzio.md` | az állapot és a verzió, a rendszer vezeti |
 | `BEALLITAS-PROMPT.md` | ugyanez a beszélgetés böngészős chatben, fájlok nélkül |
 | `settings-reszlet.json` | az egyetlen engedély, amit a frissítés kér |

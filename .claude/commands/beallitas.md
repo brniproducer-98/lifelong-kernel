@@ -4,11 +4,13 @@ description: Az első beszélgetés. Ebből ismeri meg a rendszer a vállalkozá
 
 # Beállítás
 
-Ez a beszélgetés a rendszer első napja. Ebből lesz minden, amit {{keresztnév}} vállalkozásáról tudsz. Bármikor újraindítható, és mindig onnan folytatja, ahol abbamaradt.
+Ez a beszélgetés a rendszer első napja. Ebből lesz minden, amit a vállalkozásról tudsz. Bármikor újraindítható, és mindig onnan folytatja, ahol abbamaradt.
+
+**Előbb olvasd el a `rendszer/profil.md`-t.** Ott áll a tulajdonos keresztneve (a beszélgetésben így szólítod), a nyilvános felületei, a saját anyagainak helye, az ismert kínálata, a kérdéskörök sorrendje, az érzékeny adat tudnivalója, az első munkaparancs, a Lifelong címe és a kiegészítő kérdéskörök. Ebben a fájlban „ő" és „a tulajdonos" mindig rá vonatkozik. Ha a profil hiányzik, mondd ki, és állj meg: a profil nélkül a beállítás nem rá szabott.
 
 **A vezérelv:** amit meg tudsz nézni, azt ne kérdezd meg. Amit nem tudsz megnézni, azt kérdezd meg egyszer, pontosan.
 
-**A szavak, amiket felé használsz.** A blokk neki „kérdéskör". Az ő saját fájljait és a saját mappáját néven nevezed, hogy felismerje; a rendszer fájljait és útvonalait nem mondod ki, helyette azt mondod, mit tud már a rendszer, és mit nem. A záró átolvasást „átolvasás"-nak, a két záró kérdést „ellenőrző kérdés"-nek hívod; a belső szavakat (blokk, kapu, teszt) nem mondod ki.
+**A szavak, amiket felé használsz.** A blokk neki „kérdéskör". Az ő saját fájljait és a saját mappáját néven nevezed, hogy felismerje; a rendszer fájljait és útvonalait nem mondod ki, helyette azt mondod, mit tud már a rendszer, és mit nem. A záró közös átolvasást „átolvasás"-nak, a két záró kérdést „ellenőrző kérdés"-nek hívod; a belső szavakat (blokk, kapu, teszt, profil) nem mondod ki.
 
 ---
 
@@ -20,8 +22,8 @@ Ez a beszélgetés a rendszer első napja. Ebből lesz minden, amit {{keresztné
 
 1. **Szólj előre az angol ablakokról,** egy mondatban: a gép rákérdezhet, ha fájlt írsz vagy weboldalt nyitsz meg, több ablak is jöhet, mindegyik a te kérésed, a `Yes` mindig csak azt az egyet engedi.
 2. **Mondd meg, mit látsz.** Nem technikai szavakkal: látod-e a levelezését, a naptárát, a táblázatait, a fájljait, a weboldalát, vagy csak ezt a mappát. Ha valami nincs, mondd ki, de ne állj meg: a beállítás nagy része enélkül is megy.
-3. **Olvasd el, ami a mappában már megvan:** {{a csomag gyártója ide írja: kitöltött kérdőív, átirat, a saját szövegek mappája, átadó jegyzetek; csak a munkamappán belüli útvonalak}}. Ha tíznél több fájl van, elég a fájlnevek listája; egy fájlt csak akkor nyiss meg, ha egy kérdésedre abban van a válasz. Ha egy fájlt nem tudsz elolvasni (`.docx`, kép), mondd ki, és kérd a szövegét bemásolva. **Ami ezekből kiderül, azt nem kérdezed meg**, csak egy mondatban megerősíted.
-4. **Nézd meg a nyilvános felületeit**, ha tudsz weboldalt olvasni: {{weboldal, árlista, közösségi oldal}}. Kínálatot és árat onnan olvass, és csak az eltérést kérdezd. Ha nem tudsz weboldalt olvasni, most ne kérdezz semmit: a kínálat és az ár az 1. blokk végén kerül sorra.
+3. **Olvasd el, ami a mappában már megvan:** a profil „A saját anyagai a mappán belül" pontja szerint. Ha tíznél több fájl van, elég a fájlnevek listája; egy fájlt csak akkor nyiss meg, ha egy kérdésedre abban van a válasz. Ha egy fájlt nem tudsz elolvasni (`.docx`, kép), mondd ki, és kérd a szövegét bemásolva. **Ami ezekből kiderül, azt nem kérdezed meg**, csak egy mondatban megerősíted.
+4. **Nézd meg a nyilvános felületeit**, ha tudsz weboldalt olvasni: a profil „Nyilvános felületek" pontja szerint. Kínálatot és árat onnan olvass, és csak az eltérést kérdezd. Ha nem tudsz weboldalt olvasni, most ne kérdezz semmit: a kínálat és az ár az 1. blokk végén kerül sorra.
 5. **Ha a házirend szerint az ismerkedést már felajánlottad és igent kaptál, ne ismételd a bevezetőt.** Csak annyit mondj: kezdjük az első kérdéskörrel. Ha a beszélgetés a `/beallitas` paranccsal indult, akkor mondd el egy mondatban: néhány rövid kérdéskör, egyszerre egy, bármikor mondhatja, hogy elég mára.
 
 ## 1. A beszélgetés szabályai
@@ -37,13 +39,13 @@ Ez a beszélgetés a rendszer első napja. Ebből lesz minden, amit {{keresztné
 - **Személyes adat.** Az ügyfelei neve, e-mail címe, telefonszáma sem a `knowledge/`, sem a `records/` fájlokba nem kerül. Ahol egy valódi szövegben szerepel, `[név]`-re cseréled, és ezt megmondod neki.
 - **Ha azt mondja, elég mára:** frissítsd az állapotfájlt, foglald össze, mi készült, mondd meg, mi jön legközelebb, és zárd le a beszélgetést.
 
-## 2. A blokkok, ebben a sorrendben
+## 2. A blokkok
 
-{{A csomag gyártója itt válogat a `BLOKK-KONYVTAR.md`-ből. Az alábbi hat az alapkészlet; a csomag típusa szerint blokk kivehető, cserélhető vagy hozzáadható. A sorrend a vevő sorrendje: előbb az, ami az első valódi munkához kell. A `knowledge/` sablonfájlok fejezetei a blokkokat követik.}}
+A sorrendet és az esetleges kihagyást a profil „Kérdéskörök sorrendje" pontja adja; alapból 1-től 6-ig. Ha a profil „Kiegészítő kérdéskörök" része nem „nincs", azokat az alapblokkok után kérdezed, a profilban megadott szöveggel és célfájllal. A sorrend a tulajdonos sorrendje: előbb az, ami az első valódi munkához kell.
 
 ### 1. blokk · Mi él ma a vállalkozásban
 
-- Melyik termék vagy szolgáltatás fut ma ténylegesen, és melyik áll, mióta? {{a gyártó ide írja a meetingből ismert kínálatot; a rendszer azt kéri, hogy erősítse meg, nem listát kérdez: „a házirendben ez a három szerepel: …"}}
+- Melyik termék vagy szolgáltatás fut ma ténylegesen, és melyik áll, mióta? Ha a profil „Ismert kínálat" pontja nem „nincs", ne listát kérdezz: mondd el, mit tudsz, és kérd, hogy erősítse meg vagy javítsa.
 - Az elmúlt egy évben nagyjából honnan jöttek a vevők: ajánlásból, hirdetésből, levélből, keresésből, saját megkeresésből?
 - Mi az, amit **nem** akar csinálni, akkor sem, ha hozna pénzt?
 - **A kínálat és az ár, a blokk végén.** Ha a nyilvános oldalról már kiolvastad, mondd el, mit találtál, és csak az eltérést kérdezd. Ha nem tudtad megnézni, kérd meg, hogy mondja el vagy másolja be: mit ad, mennyiért, mi jár hozzá. Az ár mellé forrás és dátum kerül; az árat a rendszer később csak idézi, nem változtatja.
@@ -86,7 +88,7 @@ Ne írd le, hogy „kedves és közvetlen". A minták maguk a kánon. Amit kiolv
 - Mit ne csináljon a rendszer soha helyette?
 - Kinek ne írjon, kit hagyjon ki?
 - Mi az, amit csak ő mondhat ki (ár, ígéret, határidő)?
-- {{érzékeny adat, ha a csomagban van ilyen: a gyártó ide írja a tudnivalót és azt, hogy a vevő dönt; a döntés dátummal kerül a fájlba}}
+- Ha a profil „Érzékeny adat" pontja nem „nincs": mondd el röviden a tudnivalót, kérdezd meg, mit dönt, és a döntést dátummal írd a fájlba. Amíg nem döntött, ilyen adatot nem gyűjtesz és nem számolsz ki.
 
 → `knowledge/hatarok.md`
 
@@ -104,7 +106,7 @@ Ne írd le, hogy „kedves és közvetlen". A minták maguk a kánon. Amit kiolv
 2. **A chatben, tömören, a rendszer fájljainak neve nélkül:** mit tud már a rendszer (egy mondat kérdéskörönként), a legfontosabb dolgok, amiket megértettél (annyi, amennyi tényleg megvan), miben vagy bizonytalan tételesen, mit nem tudtál megnézni és mi kellene hozzá.
 3. **Írj egy sort a `records/naplo.md`-be:** mikor futott, meddig jutott. Ha a napló nincs, hozd létre. Vevőnév ide sem kerül.
 
-**Ha minden blokk kész vagy kihagyva, két dolog következik, sorrendben.**
+**Ha minden blokk kész vagy kihagyva, három dolog következik, sorrendben.**
 
 Az átolvasás. Mondd neki, ebben az értelemben:
 
@@ -119,6 +121,6 @@ Az ellenőrző kérdések. Válaszolj neki erre a kettőre, ő pedig mondja meg,
 
 Mindkét választ és az ő ítéletét írd az állapotfájl ellenőrző táblájába, és az `Állapot:` sort állítsd **lezárva**-ra.
 
-**A jelentés.** Készíts egy rövid jelentést a Lifelongnak, személyes adat nélkül: a mai dátum; a kérdéskörök állapota egy-egy szóval; a két ellenőrző kérdésre adott válaszod és az ő ítélete; ami nyitva maradt; a `records/verzio.md` verziója. Az ügyfelei neve, e-mail címe, az árai és a saját szövegei nem kerülnek bele. Mutasd meg neki, és kérdezd meg: *„Elküldhetjük ezt a Lifelongnak, hogy lássák, a beállítás lefutott? Csak ez a szöveg megy, és te nyomod meg a küldést."* Ha igen, és látod a levelezését: piszkozatot készítesz a {{a mi címünk}} címre, „Beállítás lefutott" tárggyal, és megmondod, hol találja; a küldés az övé. Ha nem látod a levelezését: add oda a szöveget egy bemásolható blokkban, és mondd meg, hova küldje. Ha nemet mond, a jelentés nem megy sehova, és ezt a naplóba írod.
+A jelentés. Készíts egy rövid jelentést a Lifelongnak, személyes adat nélkül: a mai dátum; a kérdéskörök állapota egy-egy szóval; a két ellenőrző kérdésre adott válaszod és az ő ítélete; ami nyitva maradt; a `records/verzio.md` verziója. Az ügyfelei neve, e-mail címe, az árai és a saját szövegei nem kerülnek bele. Mutasd meg neki, és kérdezd meg: *„Elküldhetjük ezt a Lifelongnak, hogy lássák, a beállítás lefutott? Csak ez a szöveg megy, és te nyomod meg a küldést."* Ha igen, és látod a levelezését: piszkozatot készítesz a profil „A jelentés címe" pontjában álló címre, „Beállítás lefutott" tárggyal, és megmondod, hol találja; a küldés az övé. Ha nem látod a levelezését: add oda a szöveget egy bemásolható blokkban, és mondd meg a címet. Ha nemet mond, a jelentés nem megy sehova, és ezt a naplóba írod.
 
-Utána javasold az első valódi munkát: **{{az első munkaparancs neve; a parancs fájljának léteznie kell a csomagban}}**. A beállítás ezzel sem ér véget: ami később kiderül, azt a munka közben kérdezed és írod be.
+Utána javasold az első valódi munkát: a profil „Az első valódi munka" pontjában álló parancsot. A beállítás ezzel sem ér véget: ami később kiderül, azt a munka közben kérdezed és írod be.
