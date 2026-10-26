@@ -8,7 +8,7 @@
 |---|---|
 | `jelszo-mentes.sh` | egy macOS-ablak rejtett mezővel bekéri a Gmail-alkalmazásjelszót, és a Kulcskarikába menti; a jelszó nem kerül a chatbe és a kimenetre |
 | `level-epito.sh` | kész MIME-levelet épít: HTML-törzs, opcionális csatolt PDF, opcionális másolatcímzett, saját Message-ID; válaszlevélnél `In-Reply-To` és `References` fejléc (1.1), így a Gmail a piszkozatot a megválaszolt szálba teszi |
-| `piszkozat-gyar.sh` | a levelet a `\Drafts` jelzésű mappába teszi (`--proto =imaps`, csak keresés és APPEND); ugyanazt a Message-ID-t nem írja be kétszer; lassú válasz után ellenőriz; kimenet: OK, MAR-VAN vagy HIBA |
+| `piszkozat-gyar.sh` | a levelet a `\Drafts` jelzésű mappába teszi (`--proto =imaps`, csak keresés és APPEND); ugyanazt a Message-ID-t nem írja be kétszer; lassú válasz után ellenőriz; kimenet: OK, MAR-VAN vagy HIBA; `--fejlec` módban (1.1) a megválaszolandó levél Message-ID-jét és előzményét adja, csak olvasva (`FETCH ENVELOPE`, az RFC 3501 szerint nem jelöl olvasottnak) |
 | `naplo-ellenorzes.sh` | ellenőrzi, hogy a jelszó egyetlen chat-naplóban sem szerepel; kimenet: OK vagy HIBA |
 | `SHA256SUMS` | az ellenőrző összegek; letöltés után `shasum -a 256 -c SHA256SUMS` |
 
