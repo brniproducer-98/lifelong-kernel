@@ -18,6 +18,7 @@ Ez a Lifelong Company ügyfélrendszereinek közös része. Egy ügyfél a sajá
 | `BEALLITAS-PROMPT.md` | ugyanez a beszélgetés böngészős chatben, fájlok nélkül |
 | `settings-reszlet.json` | az egyetlen engedély, amit a frissítés kér |
 | `kernel-manifest.json` | a kiadási jegyzék: verzió, változások, fájlok és ellenőrző összegek |
+| `modulok/piszkozat-gyar/` | választható modul: a kész levelet tiszta linkkel, webes logóval és csatolt PDF-fel teszi a Gmail Piszkozatok közé, IMAP-on; a `/frissites` nem telepíti, ügyfélenkénti telepítő levél hozza |
 
 **Hogyan frissül egy ügyfélnél.** Az ügyfél Claude-ja a `/frissites` paranccsal letölti a jegyzéket, felsorolja a változásokat, és csak igen után ír. A `main` ág csak elfogadott pull requesttel mozdul; a fájlok címkézett kiadásból jönnek. A rendszer sosem ír az ügyfél házirendjébe, a róla szóló tudásba vagy az anyagaiba; a házirend egyetlen, kijelölt szakaszát külön igennel cseréli.
 
