@@ -1,5 +1,5 @@
 #!/bin/bash
-# Piszkozat-gyár · levélépítő (K31, 2026-10-22; 1.1: válaszlevél, 2026-10-26)
+# Piszkozat-gyár · levélépítő (K31, 2026-10-22; 1.1: válaszlevél, 2026-10-26; 1.2: több csatolmány, 2026-11-03)
 # Kész MIME-levelet épít: HTML törzs tiszta linkekkel, opcionálisan beágyazott logó (CID), opcionálisan csatolt PDF.
 # Csak gyári eszközök: base64, uuidgen, date. A base64-et a szkript készíti, nem a modell.
 # FIGYELEM (mérve 2026-10-22): a beágyazott (CID) logó a telefonos Gmail-appból küldve elvész. A logó webes kép legyen a törzsben
@@ -7,13 +7,19 @@
 # Válaszlevél (mérve 2026-10-24): ha a 10. paraméter a megválaszolt levél Message-ID-je, a levél In-Reply-To és References fejlécet kap,
 # és a Gmail a piszkozatot a megválaszolt szálba teszi. A tárgy ilyenkor "Re: " + az eredeti tárgy legyen. A 11. paraméter a megválaszolt
 # levél saját References fejléce (ha van), hogy a lánc teljes maradjon.
-# Használat: level-epito.sh <felado> <cimzett> <targy> <torzs.html> <kimenet.eml> [logo.png|-] [csatolmany.pdf|-] [message-id|-] [masolat|-] [valasz-message-id|-] [valasz-references|-]
+# Több csatolmány (1.2, 2026-11-03): a 7. paraméterben a PDF-ek "|" jellel elválasztva, például "a.pdf|b.pdf" (foglalt DJ: két rider egy levélben).
+# Egy PDF vagy "-" ugyanúgy működik, mint az 1.1-ben. Minden fájlnak léteznie kell, különben HIBA, és levél nem készül.
+# Használat: level-epito.sh <felado> <cimzett> <targy> <torzs.html> <kimenet.eml> [logo.png|-] [csatolmany.pdf|"a.pdf|b.pdf"|-] [message-id|-] [masolat|-] [valasz-message-id|-] [valasz-references|-]
 set -eu
 FROM="$1"; TO="$2"; SUBJ="$3"; HTMLF="$4"; OUT="$5"; LOGO="${6:--}"; PDF="${7:--}"; MID="${8:--}"; CC="${9:--}"; IRT="${10:--}"; REFS="${11:--}"
 # A megválaszolt levél fejléce külső adat: sortörés nem maradhat benne (fejléc-befecskendezés ellen), és csak <…> alakú azonosító mehet át.
 IRT=$(printf '%s' "$IRT" | tr -d '\r\n'); REFS=$(printf '%s' "$REFS" | tr -d '\r\n')
 if [ "$IRT" != "-" ] && ! printf '%s' "$IRT" | grep -Eq '^<[^<> ]+>$'; then echo "HIBA: a valasz-message-id nem <…> alakú"; exit 1; fi
 if [ "$REFS" != "-" ] && ! printf '%s' "$REFS" | grep -Eq '^(<[^<> ]+>)( <[^<> ]+>)*$'; then echo "HIBA: a valasz-references nem <…> azonosítók sora"; exit 1; fi
+if [ "$PDF" != "-" ]; then
+  IFS='|' read -r -a PDFS <<< "$PDF"
+  for f in "${PDFS[@]}"; do [ -f "$f" ] || { echo "HIBA: a csatolmány nem található: $f"; exit 1; }; done
+fi
 [ "$MID" = "-" ] && MID="<$(uuidgen | tr 'A-Z' 'a-z')@piszkozatgyar.lifelong>"
 B1="rel_$(uuidgen | tr -d '-')"; B2="mix_$(uuidgen | tr -d '-')"
 enc_subj() { printf '=?UTF-8?B?%s?=' "$(printf '%s' "$1" | base64 | tr -d '\n')"; }
@@ -37,9 +43,11 @@ DATE=$(LC_ALL=C date '+%a, %d %b %Y %H:%M:%S %z')
   fi
   printf -- '\r\n--%s--\r\n' "$B1"
   if [ "$PDF" != "-" ]; then
-    FN=$(basename "$PDF")
-    printf -- '\r\n--%s\r\nContent-Type: application/pdf; name="%s"\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename="%s"\r\n\r\n' "$B2" "$FN" "$FN"
-    base64 -b 76 -i "$PDF" | sed 's/$/\r/'
+    for f in "${PDFS[@]}"; do
+      FN=$(basename "$f")
+      printf -- '\r\n--%s\r\nContent-Type: application/pdf; name="%s"\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename="%s"\r\n\r\n' "$B2" "$FN" "$FN"
+      base64 -b 76 -i "$f" | sed 's/$/\r/'
+    done
     printf -- '\r\n--%s--\r\n' "$B2"
   fi
 } > "$OUT"

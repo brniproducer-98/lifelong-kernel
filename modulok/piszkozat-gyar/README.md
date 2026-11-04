@@ -1,4 +1,4 @@
-# Piszkozat-gyár · választható modul (1.1)
+# Piszkozat-gyár · választható modul (1.2)
 
 **Mit old meg.** A Claude Gmail-összekötője a piszkozatba írt linket egy Google-os átirányító címre cseréli, ami a mentés után egy napig él; a képet (logót) kiszedi; nagy csatolmányt nem tud. A piszkozat-gyár a kész levelet IMAP-on teszi a Gmail Piszkozatok mappájába: tiszta linkkel, webes logóval, csatolt PDF-fel, egy lépésben. **Küldeni nem tud:** csak piszkozatot tesz le; a levelet ember küldi el.
 
@@ -7,7 +7,7 @@
 | Fájl | Mi ez |
 |---|---|
 | `jelszo-mentes.sh` | egy macOS-ablak rejtett mezővel bekéri a Gmail-alkalmazásjelszót, és a Kulcskarikába menti; a jelszó nem kerül a chatbe és a kimenetre |
-| `level-epito.sh` | kész MIME-levelet épít: HTML-törzs, opcionális csatolt PDF, opcionális másolatcímzett, saját Message-ID; válaszlevélnél `In-Reply-To` és `References` fejléc (1.1), így a Gmail a piszkozatot a megválaszolt szálba teszi |
+| `level-epito.sh` | kész MIME-levelet épít: HTML-törzs, opcionális csatolt PDF, opcionális másolatcímzett, saját Message-ID; válaszlevélnél `In-Reply-To` és `References` fejléc (1.1), így a Gmail a piszkozatot a megválaszolt szálba teszi; több PDF egy levélben, a 7. paraméterben `|` jellel elválasztva (1.2) |
 | `piszkozat-gyar.sh` | a levelet a `\Drafts` jelzésű mappába teszi (`--proto =imaps`, csak keresés és APPEND); ugyanazt a Message-ID-t nem írja be kétszer; lassú válasz után ellenőriz; kimenet: OK, MAR-VAN vagy HIBA; `--fejlec` módban (1.1) a megválaszolandó levél Message-ID-jét és előzményét adja, csak olvasva (`FETCH ENVELOPE`, az RFC 3501 szerint nem jelöl olvasottnak) |
 | `naplo-ellenorzes.sh` | ellenőrzi, hogy a jelszó egyetlen chat-naplóban sem szerepel; kimenet: OK vagy HIBA |
 | `SHA256SUMS` | az ellenőrző összegek; letöltés után `shasum -a 256 -c SHA256SUMS` |
@@ -20,6 +20,7 @@
 - a jelszó a naplókban nem szerepel;
 - SMTP-re a curl nem megy;
 - **(1.1, 2026-10-24 és 26)** a válasz-piszkozat a megválaszolt szálba kerül, és a piszkozat a Message-ID-jével azonnal megtalálható (Gmail-összekötő, `list_drafts`, `rfc822msgid:`).
+- **(1.2, 2026-11-03 és 04)** két PDF egy levélben: a Gmail Piszkozatok listájában mindkét csatolmány megjelenik; egy PDF-fel a kimenet szerkezete azonos az 1.1-ével; hiányzó csatolmánynál HIBA, és levél nem készül.
 
 **Két korlát:**
 - **A beágyazott (CID) logó a telefonos Gmail-appból küldve elvész.** A logó ezért mindig webes kép legyen (a saját Gmail-aláírás képcíme).
