@@ -2,6 +2,16 @@
 
 A kiadási lista `valtozasok` mezője ebből a fájlból jön, a verzió címsora alatti pontokból. **Csak olyan mondat kerül ide, ami az ügyfélnél változtat valamit, közérthetően, egy mondat egy változás.** Amit az ügyfél nem vesz észre (kiadási eszköz, README, belső jegyzet), az nem kerül ide. A `/frissites` ezt olvassa fel neki szó szerint.
 
+## 1.1.2
+
+- Ha egy fájlírásra nemet mondasz, a rendszer mostantól pontosan ezt mondja: csak azt az egy írást hagyja ki, a beszélgetés megy tovább, és amit így nem írt le, azt később újra megkérdezi.
+- A frissítés semmit nem töröl: a letöltött fájlok és a régi változatok mentése egy dátummal jelölt mappában megmarad, és abból bármikor visszaállítható.
+- A frissítés csak úgy tölt le, hogy a fájlok sértetlenségét ellenőrizni tudja; ha ez nem lehetséges, nem frissít.
+- A frissítés nem írhat a rólad szóló tudásba, a nyilvántartásaidba, a kész anyagaid közé, a gép beállításai közé, és a mappádon kívülre.
+- A verziót mutató feljegyzésben a telepítés dátumát a frissítés kitölti, ha még üres volt.
+- Ha a frissítés egy részét a gép nem engedi beírni, a rendszer nem jelöli késznek a frissítést, így a következő alkalommal újra felajánlja.
+- Az első beszélgetésben a rendszer a beszélgetés részeit mindenhol kérdéskörnek nevezi, és belső szakszót nem használ.
+
 ## 1.1.1
 
 - Az első beszélgetés és a frissítés parancsa mostantól egy külön profilfájlból olvassa a rád szabott adatokat (a neved, az oldalad, a kínálatod), ezért a közös rész frissítése ezekhez soha nem nyúl.
